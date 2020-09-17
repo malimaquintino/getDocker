@@ -33,7 +33,7 @@ sudo docker exec -i mysqldatabase mysql -uroot -ppassword dbname < bkp.sql
 
 ## Helpful docker commands
 **bild a new image**  
-sudo docker build -t img-nome .
+sudo docker build -t img-nome  
 
 **List docker images**  
 sudo docker images -a
