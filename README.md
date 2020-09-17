@@ -23,29 +23,38 @@ sudo docker-compose down
 ## Acessando os containers
 
 **entrar no container do mysql**
+
 sudo docker-compose exec db bash
 
 **entrar no container do centos**
+
 sudo docker-compose exec cent bash
 
 **restaurar banco de dados**
+
 sudo docker exec -i mysqldatabase mysql -uroot -ppassword dbname < bkp.sql
 
 ## Comandos docker
 **bilda uma imagem**
+
 sudo docker build -t img-nome .
 
 **listar as imagens**
+
 sudo docker images -a
 
 **remover todas imagens**
+
 sudo docker rmi $(sudo docker images -a -q)
 
 **remover volumes**
+
 sudo docker volume prune
 
 **listar containers**
+
 sudo docker container ls
 
 **apagar storages não utilizados**
+
 sudo docker container prune
