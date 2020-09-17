@@ -1,60 +1,51 @@
 # getDocker
 
-Docker containers para ambiente de desenvolvimento do projeto get
+Docker containers for GET's project development environment
 
-# Estrutura de diretórios
+# Directory structure
 
  - src/
  - php/
  - Dockerfile
  - docker-compose.yml
 
- **src/**: aqui você deve colocar o código fonte do seu projeto 
- **php/**: aqui ficam os arquivos de configurações do container (php.ini, my.conf, etc..)
+ **src/**: here you must place your project code
+ **php/**: here are the configuration files (php.ini, my.conf, etc..)
 
-# Comandos
+# Commands
 
-Siga o passo a passo para **startar** seu ambiente
+Follow this steps to run your project
 
-## Iniciando/parando o containers
+## Start/Stop the containers
 sudo docker-compose up -d
 sudo docker-compose down
 
-## Acessando os containers
+## Accessing containers
 
-**entrar no container do mysql**
-
-sudo docker-compose exec db bash
-
-**entrar no container do centos**
-
+**Access Centos container**
 sudo docker-compose exec centos bash
 
-**restaurar banco de dados**
+**Access Mysql container**
+sudo docker-compose exec db bash
 
+**Restore mysql backup**
 sudo docker exec -i mysqldatabase mysql -uroot -ppassword dbname < bkp.sql
 
-## Comandos docker
-**bilda uma imagem**
-
+## Helpful docker commands
+**bild a new image**
 sudo docker build -t img-nome .
 
-**listar as imagens**
-
+**List docker images**
 sudo docker images -a
 
-**remover todas imagens**
-
+**Remove all images**
 sudo docker rmi $(sudo docker images -a -q)
 
-**remover volumes**
-
+**Remove volume**
 sudo docker volume prune
 
-**listar containers**
-
+**List containers**
 sudo docker container ls
 
-**apagar storages não utilizados**
-
+**Remove storages**
 sudo docker container prune
