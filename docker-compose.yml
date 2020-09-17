@@ -1,12 +1,13 @@
 version: '3.1'
 
 services:
-  cent:
-    image: Dockerfile
+  centos:
+    build:
+      context: ./
     ports:
       - 80:80
     volumes:
-      - ./src/trunk/codigo:/var/www/html:Z
+      - ./src/:/var/www/html:Z
 
   db:
     image: mysql

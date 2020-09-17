@@ -28,7 +28,7 @@ sudo docker-compose exec db bash
 
 **entrar no container do centos**
 
-sudo docker-compose exec cent bash
+sudo docker-compose exec centos bash
 
 **restaurar banco de dados**
 
