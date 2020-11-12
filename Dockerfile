@@ -36,6 +36,10 @@ RUN yum install -y php-json
 RUN yum install -y php-xmlrpc
 RUN yum install -y php-opcache
 
+RUN yum install -y php-intl
+RUN mkdir /var/www/tmp/
+RUN chmod -R 0777 /var/www/tmp/
+
 COPY php/php.ini /etc/php.ini
 # EXPOSE 80
 
